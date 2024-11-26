@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Elanor的个人歌单</title>
+        <meta charset="utf-8">
+        <style type="text/css">
+            body{
+                background-color: aquamarine;
+                background-image: url('img/uuz.jpg');
+                background-size: cover;
+                margin-left: 20%;
+                margin-right:20%;
+                /*border: 2px dotted black;*/
+                padding : 10px 10px 10px 10px;
+                font-family: sans-serif;
+            }
+            .text-container {
+                position: relative;
+                overflow: hidden; /* 防止文字在动画过程中溢出容器 */
+            }
+
+            .fade-in {
+                position: relative;
+                opacity: 0; /* 初始状态不可见 */
+                transform: translateY(100%);
+                animation: fade-in-animation 2s forwards; /* 应用动画 */
+            }
+            .fade-in2 {
+                position: relative;
+                opacity: 0; /* 初始状态不可见 */
+                transform: translateY(-100%);
+                animation: fade-in-animation 2s forwards; /* 应用动画 */
+            }
+
+
+            @keyframes fade-in-animation {
+             from {
+                opacity: 0;
+                transform: translateY(100%);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+            }
+        </style>
+        <link rel="stylesheet" href="profile.css">
+    </head>
+    <body >
+        <h1>Elanor的个人歌单</h1>
+
+        <ul>
+            <li><a href="index.html" class="active">首页</a></li>
+            <li><a href="web/rock.html">rock</a></li>
+            <li><a href="web/touhou.html">touhou</a></li>
+        </ul>
+        <div style="background-color: rgba(183, 216, 244, 0.6);">
+        <div class="text-container">
+        <blockquote class="fade-in2">
+            <p>Life is what happens when you're busy making other plans.</p>
+            <footer ><i>— John Lennon</i></footer>
+        </blockquote>
+        
+        <h2 class="fade-in2">Elanor（张鸿瑞）的个人歌单</h2>
+        
+        <blockquote class="fade-in">
+            <p style="font-family: Monotype Corsiva;font-size: 20px;"><i>There are places i'll remember<br>
+                All my life, though some have changed<br>
+                Some forever, not for better<br>
+                Some have gone and some remain</i></p>
+            <footer >— The Beatles <i>In my life</i></footer>
+        </blockquote>
+        <p class="fade-in" style="font-family: 宋体;"> 这是一个收集了个人偏好的歌单<br>
+        内容包括了喜欢的音乐类型、喜欢的乐队、专辑以及单曲<br>
+        世界很大，人生很广，音乐总能为平淡的生活添加色彩<br>
+        然而，正如beatles歌曲中所说的一样，有些音乐已经被遗忘，<br>
+        而有些歌曲永远留在了回忆之间<br>
+
+        </p>
+        <p class="fade-in" style="font-size: larger;"><b>一共收集了两种类型的歌曲：摇滚和东方project的歌曲</b></p>
+        </div>
+
+        </div>
+
+    </body>
+</html>

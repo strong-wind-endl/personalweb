@@ -1,0 +1,38 @@
+/* 设置元素的基本样式 */
+.hover-effect {/*
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;*/
+    margin-top: 20px;
+    margin-bottom: 20px;
+    line-height: 1.5em;
+    background-color: rgba(100, 99, 99, 0.7);
+    margin-bottom: 5em;
+     font-family: 等线;
+     font-size:8px;
+     opacity: 0;
+    transition: all 1s ease;/* 平滑过渡效果 */
+  }
+  
+  /* 定义关键帧动画 */
+  @keyframes hoverAnimation {
+    from {
+/* 初始状态，无缩放 */
+      font-size: 8px;
+      opacity: 0;
+    }
+    to {
+      font-size: medium;
+      opacity: 1;
+    }
+  }
+  
+  /* 鼠标悬停时应用动画 */
+  .hover-effect:hover {
+    animation: hoverAnimation 1s forwards; /* 应用动画，持续时间0.5秒，动画结束后保持最后一帧状态 */
+  }
