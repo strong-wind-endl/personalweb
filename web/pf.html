@@ -1,59 +1,24 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Pink Floyd</title>
+        <title>乐队——Pink Floyd</title>
         <meta charset="utf-8">
-        <style type="text/css">
-            body{
-                background-color: rgb(255, 255, 255);
-                background-image: url('../img/Pink-Floyd.jpg');
-                background-size: cover;
-                background-attachment: fixed;
-                
-                /*border: 2px dotted black;*/
-                padding : 10px 10px 10px 10px;
-                font-family: sans-serif;
-            }
-            
-            ul{
-                font-family: Consolas;
-                list-style: none;/*li前边没有小圆点*/
-               padding:0;
-                overflow: hidden;
-                background-color:  rgb(0, 0, 0);
-            }
-
-            li{
-               float:left;
-            }
-
-            li a{
-             display:block;
-
-                color: rgb(255, 255, 255);
-                text-align: center;
-                padding:14px 16px;
-                text-decoration: none;
-            }
-
-            li a:hover{
-                background-color: rgb(135, 135, 135);
-            }
-
-            .active{
-                background-color: rgba(179, 179, 179, 1);
-            }
-        </style>
+        
+        <link rel="stylesheet" href="../profile.css">
         <link rel="stylesheet" href="st.css">
     </head>
-    <body>
-        <ul style="position:fixed;top:0;width:100%">
-            <li><img src="../img/pflogo.jpg" style="width: 100px;"></li>
-            <li><a href="../index.html">首页</a></li>
-            <li><a href="rock.html"  class="active">ROCK</a></li>
-            <li><a href="touhou.html">TOUHOU</a></li>
-        </ul>
-        <div style="background-color: rgba(244, 232, 232, 0.9);padding-bottom: 200px;margin-left: 20%;margin-right: 20%;margin-top: 70px;">
+    <body style="background-image: url('../img/Pink-Floyd.jpg');background-attachment: fixed;background-size: cover;">
+        <div class="head" >
+            <img style="width: 150px;float: left;" src="../img/rock.jpg">
+            <h1 style="background-color: rgb(255, 255, 255);padding-top: 30px;">BANDS</h1>
+            <ul style="width:100%">
+                <li><a href="../index.html" >首页</a></li>
+                <li><a href="rock.html" class="active">摇滚</a></li>
+                <li><a href="touhou.html">东方project</a></li>
+
+            </ul>
+        </div>
+        <div style="background-color: rgba(244, 232, 232, 0.9);padding-bottom: 200px;margin-left: 20%;margin-right: 20%;">
             
             <div style="margin-left:10%;margin-right: 10%;">
                 <h1 style="font-family: 宋体;"><br>乐队介绍</h1>
@@ -64,7 +29,7 @@
                 </p>
 
                 <h1 style="font-family: 宋体;">个人最喜欢的专辑</h1>
-                <img src="../img/darkside.jpg" style="width: 250px;float: left;margin:10px" >
+                <img src="../img/darkside.jpg" style="width: 250px;float: left;margin:10px;margin-top: 30px;" >
                 <p class="hover-effect"><em style="font-size: larger;">Dark Side of the Moon</em><br>
                     《The Dark Side of the Moon》是英国摇滚乐队Pink Floyd发行的一张具有里程碑意义的专辑<br>
 

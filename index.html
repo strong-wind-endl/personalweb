@@ -2,85 +2,92 @@
 <html>
     <head>
         <title>Elanor的个人歌单</title>
-        <meta charset="utf-8">
-        <style type="text/css">
-            body{
-                background-color: aquamarine;
-                background-image: url('img/uuz.jpg');
-                background-size: cover;
-                margin-left: 20%;
-                margin-right:20%;
-                /*border: 2px dotted black;*/
-                padding : 10px 10px 10px 10px;
-                font-family: sans-serif;
-            }
-            .text-container {
-                position: relative;
-                overflow: hidden; /* 防止文字在动画过程中溢出容器 */
-            }
-
-            .fade-in {
-                position: relative;
-                opacity: 0; /* 初始状态不可见 */
-                transform: translateY(100%);
-                animation: fade-in-animation 2s forwards; /* 应用动画 */
-            }
-            .fade-in2 {
-                position: relative;
-                opacity: 0; /* 初始状态不可见 */
-                transform: translateY(-100%);
-                animation: fade-in-animation 2s forwards; /* 应用动画 */
-            }
-
-
-            @keyframes fade-in-animation {
-             from {
-                opacity: 0;
-                transform: translateY(100%);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-            }
-        </style>
         <link rel="stylesheet" href="profile.css">
     </head>
-    <body >
-        <h1>Elanor的个人歌单</h1>
+    <body>
 
-        <ul>
-            <li><a href="index.html" class="active">首页</a></li>
-            <li><a href="web/rock.html">rock</a></li>
-            <li><a href="web/touhou.html">touhou</a></li>
-        </ul>
-        <div style="background-color: rgba(183, 216, 244, 0.6);">
-        <div class="text-container">
-        <blockquote class="fade-in2">
-            <p>Life is what happens when you're busy making other plans.</p>
-            <footer ><i>— John Lennon</i></footer>
-        </blockquote>
-        
-        <h2 class="fade-in2">Elanor（张鸿瑞）的个人歌单</h2>
-        
-        <blockquote class="fade-in">
-            <p style="font-family: Monotype Corsiva;font-size: 20px;"><i>There are places i'll remember<br>
-                All my life, though some have changed<br>
-                Some forever, not for better<br>
-                Some have gone and some remain</i></p>
-            <footer >— The Beatles <i>In my life</i></footer>
-        </blockquote>
-        <p class="fade-in" style="font-family: 宋体;"> 这是一个收集了个人偏好的歌单<br>
-        内容包括了喜欢的音乐类型、喜欢的乐队、专辑以及单曲<br>
-        世界很大，人生很广，音乐总能为平淡的生活添加色彩<br>
-        然而，正如beatles歌曲中所说的一样，有些音乐已经被遗忘，<br>
-        而有些歌曲永远留在了回忆之间<br>
-
-        </p>
-        <p class="fade-in" style="font-size: larger;"><b>一共收集了两种类型的歌曲：摇滚和东方project的歌曲</b></p>
-        </div>
+        <div id="toggle-icon" onclick="menuToggle()">
 
         </div>
+        <div id="menu-overlay">
+            <ul>
+                <!-- href="#" ： 链接当前页面-->
+                <li><a href="#">Home</a></li>
+                <li><a href="web/rock.html">ROCK</a></li>
+                <li><a href="web/touhou.html">TOUHOU</a></li>
+                <li><a href="web/beatles.html">THE BEATLES</a></li>
+                <li><a href="web/pf.html">PINK FLOYD</a></li>
 
+            </ul>
+        </div>
+        <script>
+            function menuToggle() {
+                // 向id="menu-overlay"中的元素的class类列表属性中添加active，使得该元素属于类active
+                var nav = document.getElementById('menu-overlay');
+                nav.classList.toggle('active');
+    
+                var toggleIcon = document.getElementById('toggle-icon');
+                toggleIcon.classList.toggle('active');
+            }
+        </script>
+
+
+        <div class="head">
+            <h1>Elanor的个人歌单</h1>
+            <ul style="width:100%">
+                <li><a href="index.html" class="active">首页</a></li>
+                <li><a href="web/rock.html">摇滚</a></li>
+                <li><a href="web/touhou.html">东方project</a></li>
+                
+            </ul>
+        </div>
+        <div class="imgBox">
+            <img class="img-slide img1" src="img/uuz.jpg" alt="1">
+            <img class="img-slide img2"  src="img/2.png" alt="2">
+            <img class="img-slide img3"  src="img/th.jpg" alt="3">
+
+        </div>
+        <div class="texts-ani" style="text-align: center;">
+                <h1>这是一个收集了个人偏好的歌单</h1>
+                <p class="fade-in" style="font-family: 宋体;"> 
+                    内容包括了喜欢的音乐类型、喜欢的乐队、专辑以及单曲<br>
+                    世界很大，人生很广，音乐总能为平淡的生活添加色彩<br>
+                    然而，正如beatles歌曲中所说的一样，有些音乐已经被遗忘，<br>
+                    而有些歌曲永远留在了回忆之间<br>
+            </p>
+            <p  style="font-size: larger;"><b>一共收集了两种类型的歌曲：摇滚和东方project的歌曲</b></p>
+        </div>
+        <div class="texts-ani">
+            <p>
+                <a href="web/rock.html"><img src="img/rock.jpg" style="float:left;">
+                <h2>摇滚</h2></a>
+                摇滚（Rock and Roll）是一种音乐类型，起源于20世纪40年代末期的美国，20世纪50年代早期开始流行，迅速风靡全球。摇滚乐以其灵活大胆的表现形式和富有激情的音乐节奏表达情感，受到了全世界大多数人的喜爱，并在1960年和1970年形成一股热潮
+                <br>自摇滚的定义出现，一代摇滚巨匠也现象级地涌入市场。历史上第一首摇滚hit，美国的白人音乐家比尔·哈利在20世纪50年代中期录制的《整日摇滚》（Rock Around the Clock），随着同名电影在青少年群体中近乎疯狂的影响，迅速席卷了整个美国。于是一群穿着笔挺西装、打着领带、头发梳得油光发亮在乐队环绕下放肆舞蹈的摇滚歌手，彻底点燃了美国的大街小巷。初期的摇滚还原始地保留着爵士、蓝调以及乡村音乐的陶染，表演者虽各成一脉，但摇滚乐的主要作用还是使人随它的音乐节奏跳舞，有很强的娱乐性，有的歌词也就无需那么有连贯性，旨在有趣。
+            </p>
+        </div>
+        <div class="texts-ani">
+            <p>
+                <a href="web/touhou.html"><img src="img/thlogo.jpg" style="float:left;width:100px">
+                <h2>东方project</h2></a>
+                东方Project（日文：東方Project（とうほうプロジェクト），英文：Touhou Project，简称：东方）
+                <br>是日本同人游戏社团上海爱丽丝幻乐团（即下文所称的「官方」）所制作的一系列同人游戏、相关作品，以及基于前者由爱好者所创作的二次创作所共同构成的覆盖游戏，动漫，音乐，文学等诸多方面的领域。
+                    <br>在部分代理发行商将东方Project相关内容引进到中国市场时1，会使用「东方计划」作为中文名称。
+            </p>
+        </div>
     </body>
+    <script type="text/javascript">
+        var index=0;
+        //效果
+        function ChangeImg() {
+            index++;
+            var a=document.getElementsByClassName("img-slide");
+            if(index>=a.length) index=0;
+            for(var i=0;i<a.length;i++){
+                a[i].style.display='none';
+            }
+            a[index].style.display='block';
+        }
+        //设置定时器，每隔两秒切换一张图片
+        setInterval(ChangeImg,3000);
+    </script>
 </html>
